@@ -1,2 +1,15 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+  let click: number = 0;
+  
+</script>
+
+<h1 class="text-xl pt-4">
+  You tapped the button {click} times
+</h1>
+
+<button
+  on:click={() => {
+    click += 1;
+    console.log("hello");
+  }}
+>Click me biatch</button>
