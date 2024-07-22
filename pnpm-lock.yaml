@@ -8,12 +8,33 @@ importers:
 
   .:
     dependencies:
+      '@codemirror/autocomplete':
+        specifier: ^6.17.0
+        version: 6.17.0(@codemirror/language@6.10.2)(@codemirror/state@6.4.1)(@codemirror/view@6.28.6)(@lezer/common@1.2.1)
+      '@codemirror/commands':
+        specifier: ^6.6.0
+        version: 6.6.0
       '@codemirror/lang-javascript':
         specifier: ^6.2.2
         version: 6.2.2
+      '@codemirror/language':
+        specifier: ^6.10.2
+        version: 6.10.2
+      '@codemirror/lint':
+        specifier: ^6.8.1
+        version: 6.8.1
+      '@codemirror/search':
+        specifier: ^6.5.6
+        version: 6.5.6
+      '@codemirror/state':
+        specifier: ^6.4.1
+        version: 6.4.1
       '@codemirror/theme-one-dark':
         specifier: ^6.1.2
         version: 6.1.2
+      '@codemirror/view':
+        specifier: ^6.28.6
+        version: 6.28.6
       codemirror:
         specifier: ^6.0.1
         version: 6.0.1(@lezer/common@1.2.1)
