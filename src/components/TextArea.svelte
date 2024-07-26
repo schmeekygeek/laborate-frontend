@@ -1,29 +1,28 @@
 <script lang="ts">
-  import CodeMirror from "svelte-codemirror-editor";
-  import { javascript } from "@codemirror/lang-javascript";
-  import { EditorView } from "./CodeMirrorConfig";
-  import { oneDark } from "@codemirror/theme-one-dark";
-  import { basicSetup } from "./CodeMirrorConfig";
+  import { onMount } from 'svelte';
+  import { EditorState } from '@codemirror/state';
+  import { EditorView } from 'codemirror';
+  import { javascript } from '@codemirror/lang-javascript';
+  import { basicSetup } from './CodeMirrorConfig';
 
-  let view: EditorView;
-  let value: string = "";
+  let state: EditorState = EditorState.create({
+    doc: '',
+    extensions: [
+      javascript(),
+      basicSetup
+    ],
+  });
+
+  let editor: EditorView;
+  let dom: HTMLElement;
+
+  onMount(() => {
+    editor = new EditorView({
+      state,
+      parent: dom,
+    });
+  });
+
 </script>
 
-<div>
-  <CodeMirror 
-    on:ready={(e) => view = e.detail}
-    on:change={() => {
-      console.log(value)
-    }}
-    styles={{
-      "&": {
-        width: "800px",
-        maxwidth: "100%"
-      }
-    }}
-    basic={ false }
-    extensions={[ basicSetup ]}
-    theme={oneDark}
-    bind:value lang={javascript()}
-  />
-</div>
+<div bind:this={dom} class="editor"/>

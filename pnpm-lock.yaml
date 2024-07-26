@@ -38,9 +38,6 @@ importers:
       codemirror:
         specifier: ^6.0.1
         version: 6.0.1(@lezer/common@1.2.1)
-      svelte-codemirror-editor:
-        specifier: ^1.4.0
-        version: 1.4.0(codemirror@6.0.1(@lezer/common@1.2.1))(svelte@4.2.18)
     devDependencies:
       '@skeletonlabs/skeleton':
         specifier: ^2.10.2
@@ -1421,12 +1418,6 @@ packages:
     hasBin: true
     peerDependencies:
       svelte: ^3.55.0 || ^4.0.0-next.0 || ^4.0.0 || ^5.0.0-next.0
-
-  svelte-codemirror-editor@1.4.0:
-    resolution: {integrity: sha512-1Izqz48OfyzyHiloG9RAG6gDHHzZ9+P9SfnYkL8I+QJ1nOMjcftOI1HSds5bStZzCN5EGY1iBLYwOl4A+Xg8fA==}
-    peerDependencies:
-      codemirror: ^6.0.0
-      svelte: ^3.0.0 || ^4.0.0
 
   svelte-eslint-parser@0.41.0:
     resolution: {integrity: sha512-L6f4hOL+AbgfBIB52Z310pg1d2QjRqm7wy3kI1W6hhdhX5bvu7+f0R6w4ykp5HoDdzq+vGhIJmsisaiJDGmVfA==}
@@ -2908,11 +2899,6 @@ snapshots:
       - sass
       - stylus
       - sugarss
-
-  svelte-codemirror-editor@1.4.0(codemirror@6.0.1(@lezer/common@1.2.1))(svelte@4.2.18):
-    dependencies:
-      codemirror: 6.0.1(@lezer/common@1.2.1)
-      svelte: 4.2.18
 
   svelte-eslint-parser@0.41.0(svelte@4.2.18):
     dependencies:
