@@ -1,6 +1,6 @@
-const url = import.meta.env.VITE_PROJECT_URL;
-const anon_key = import.meta.env.VITE_ANON_KEY;
+import { createClient } from "@supabase/supabase-js";
 
-console.log()
+const URL = import.meta.env.VITE_PROJECT_URL;
+const ANON_KEY = import.meta.env.VITE_ANON_KEY;
 
-export default { url, anon_key };
+export const supabase = createClient(URL, ANON_KEY);
